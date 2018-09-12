@@ -4,5 +4,5 @@ title: Article
 slug: article
 category: etc
 menu: false
-order: 2
+order: 1
 ---
