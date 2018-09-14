@@ -2,7 +2,7 @@
 layout: post
 title:  "Django Basic"
 subtitle:   "1"
-categories: Programming
+categories: pg
 tags: web
 comments: true
 ---
