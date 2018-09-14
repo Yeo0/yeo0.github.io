@@ -2,8 +2,8 @@
 layout: post
 title:  "Django Basic"
 subtitle:   "1"
-categories: programming
-tags: Web
+categories: pg
+tags: web
 comments: true
 ---
 
@@ -54,7 +54,7 @@ comments: true
   - example.html : script 파일
   - forms.py : 게시물 작성 폼 등
 
-<br / >
+
 
 
 
@@ -74,7 +74,7 @@ comments: true
   ./managy.py startup 앱이름 ~~~
   ~~~
 
-  <br />
+  
 
 
 
@@ -94,7 +94,8 @@ comments: true
 
   `static_url` : html과 관련된 정적 파일들을 다루는 파일
 
-<br />
+
+
 
 
 
@@ -118,7 +119,6 @@ comments: true
 
 
 
-<br / >
 
 ** 참고
 
@@ -128,7 +128,9 @@ comments: true
 
 
 
-<br />
+
+
+
 
 ** 이미지출처
 
