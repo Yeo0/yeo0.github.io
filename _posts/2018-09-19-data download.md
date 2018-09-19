@@ -155,9 +155,6 @@ comments: true
       data=req.urlopen(url).read()
       text=data.decode('utf-8')
       print(text)
-
-
-​      
       ```
 
 
