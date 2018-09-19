@@ -156,10 +156,4 @@ comments: true
       text=data.decode('utf-8')
       print(text)
       ```
-
-
-
-
-
-
-​	
+      
