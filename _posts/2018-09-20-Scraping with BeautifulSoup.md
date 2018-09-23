@@ -85,7 +85,7 @@ comments: true
 
 
     - find_all() 메소드
-    
+
       ```python
       #여러개의 요소 추출하기
       from bs4 import BeautifulSoup
@@ -117,7 +117,7 @@ comments: true
 
     - ex) <a>태그 - href 속성 등 
 
-    - .string : 내부의 글자 추출 / .attrs["title"] : 내부 속성 추출
+    - *.string* : 내부의 글자 추출 / .attrs["title"] : 내부 속성 추출
 
       ```python
       #DOM요소 속성
@@ -204,43 +204,43 @@ comments: true
 
     - CSS 선택자 자세히 알아보기
 
-      1. 태그선택자 ( 요소선택자 ) : 특정이름, 태그 선택
+      1. <u>태그선택자 ( 요소선택자 )</u> : 특정이름, 태그 선택
 
          ex) "ul", "div", "li" 등
 
 
 
-      2. id 선택자 : id 선택 <id = "">
-    
+      2. <u>id 선택자</u> : id 선택 <id = "">
+
          ex) "#meigen", "#content" 등
-    
+
          - html에서 id는 구분하는 식별자 역할. (유일함)
 
 
 
-      3. 클래스 선택자 : 클래스 이름 선택
-    
+      3. <u>클래스 선택자</u> : 클래스 이름 선택
+
          ex) ".items"
-    
+
          - 만약 class="items books shoes" 라면 
-    
+
            - ".items", ".books",".shoes" 다 사용할 수 있다.
-    
+
            - 이들을 한번에 다 사용하고 싶다면 .을 이용해 공백없이 연결함
-    
+
              ".items.books.shoes"
 
 
 
-      4. 구조 선택자
-    
+      4. <u>구조 선택자</u>
+
          - 후손 선택자 : 어떤 태그 아래있는 모든 속성들. 띄어쓰기로 구분한다.
-    
+
            - ex) 위의 예시에서 html태그의 후손 선택자는 html 하위에 있는 모든 것 - body div h1 ul li
            - ex) "#meigen li" : meigen 의 후손들 중 li태그만
-    
+
          - 자식 선택자 : 어떤 태그 바로 아래에 있는 속성. > 로 나타낸다.
-    
+
            - ex) 위의 예시에서 html태그의 자식 선택자는 html 바로 밑의 body
            - ex) "ul.items > li" : ul의 items 태그의 자식 중 li태그
 
@@ -248,25 +248,19 @@ comments: true
 
 
 
+    - ==따라서 선택할 때==
 
+      ==1) 내가 가져올 태그의 갯수가 몇 개인지 판단하기==
 
-    - 따라서 선택할 때
-    
-      1) 내가 가져올 태그의 갯수가 몇 개인지 판단하기
-    
-      2) select one 인지 select 인지 구분하기
-    
-      3) 어떤 선택자를 사용해야할지 판단하기
-    
-      	ex) *soup.select("li")* 도 되지만 *soup.select("ul.items > li")* 가 더 명확
-    
-      	ex) *soup.select_one("hi")* 도 되지만 *soup.select("body > div> h1")* 가 더 명확
-    
-      4) 추출 후 원하는대로 사용한다.
+      ==2) select one 인지 select 인지 구분하기==
 
+      ==3) 어떤 선택자를 사용해야할지 판단하기==
 
+      ​	ex) *soup.select("li")* 도 되지만 *soup.select("ul.items > li")* 가 더 명확
 
+      ​	ex) *soup.select_one("hi")* 도 되지만 *soup.select("body > div> h1")* 가 더 명확
 
+      ==4) 추출 후 원하는대로 사용한다.==
 
 
 
@@ -293,16 +287,3 @@ comments: true
   print("usd/krw=",price)
   
   ```
-
-
-
-
-
-
-
-- 정리
-
-  -soup.find_all("hi",id="title")
-
-  -soup.select("h1 #title")
-

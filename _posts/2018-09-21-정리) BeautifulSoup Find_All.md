@@ -14,10 +14,6 @@ comments: true
 
 
 
-### 정리 _ BeautifulSoup _ Find_All()
-
-------
-
 
 
 ##### 1. find함수 종류
