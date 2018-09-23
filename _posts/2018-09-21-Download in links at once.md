@@ -16,6 +16,10 @@ comments: true
 
 ## 파이썬을 이용한 머신러닝, 딥러닝 실전개발 입문
 
+##### link : [*github*](https://github.com/Yeo0/Study/blob/master/Web%20Crawling/1-4.%20%EB%A7%81%ED%81%AC%EC%97%90%20%EC%9E%88%EB%8A%94%20%EA%B2%83%EC%9D%84%20%ED%95%9C%EA%BA%BC%EB%B2%88%EC%97%90%20%EB%82%B4%EB%A0%A4%EB%B0%9B%EA%B8%B0.ipynb)
+
+<br/>
+
 ### 1. 크롤링과 스크레이핑
 
 <br/>

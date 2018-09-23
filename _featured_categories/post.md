@@ -4,7 +4,7 @@ title: Post
 slug: post
 menu: true
 submenu: false
-order: 5
+order: 4
 description: >
   Diary
 ---
