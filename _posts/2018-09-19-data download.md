@@ -15,7 +15,7 @@ comments: true
 
 ### 1. 크롤링과 스크레이핑
 
-
+<br/>
 
 #### 1-1. 데이터 다운로드
 
@@ -23,7 +23,7 @@ comments: true
 
   - urllib.request  : 웹 사이트에 있는 데이터에 접근하는 기능
 
-
+<br/>
 
     - urlretrieve(url, savename) : 파일 직접 다운로드
     
@@ -41,7 +41,7 @@ comments: true
       print("저장되었습니다")
       ```
 
-
+<br/>
 
     - urlopen() :
     
@@ -63,7 +63,7 @@ comments: true
           print("저장되었습니다")
       ```
     
-    ​		
+    		
     
     - 클라이언트 접속 정보 출력 - IP확인
     
@@ -127,7 +127,7 @@ comments: true
     print(text)
     ```
 
-
+<br/>
 
     - 매개변수를 명령줄에서 지정하기
     
@@ -156,4 +156,4 @@ comments: true
       text=data.decode('utf-8')
       print(text)
       ```
-      
+

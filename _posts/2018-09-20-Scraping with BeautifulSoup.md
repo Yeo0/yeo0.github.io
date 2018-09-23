@@ -16,17 +16,13 @@ comments: true
 
 ### 1. 크롤링과 스크레이핑
 
-
+<br/>
 
 #### 1-2. BeautifulSoup으로 스크레이핑하기
 
+##### - BeautifulSoup : HTML과 XML을 분석해주는 라이브러리
 
-
-[TOC]
-
-- BeautifulSoup : HTML과 XML을 분석해주는 라이브러리
-
-
+<br/>
 
   - BeautifulSoup 기본 사용법	
 
@@ -57,7 +53,7 @@ comments: true
     
     ```
 
-
+<br/>
 
   - id로 요소를 찾는 법
 
@@ -86,7 +82,7 @@ comments: true
     print("#body=", body.string)
     ```
 
-
+<br/>
 
     - find_all() 메소드
     
@@ -115,7 +111,7 @@ comments: true
           print(text,'=',href)
       ```
 
-
+<br/>
 
   - DOM ( Document Object Model) : XML or HTML의 요소에 접근하는 구조 
 
@@ -145,6 +141,8 @@ comments: true
       a['href'] #a.html
       ```
 
+    <br/>
+
   - urlopen() + BeautifulSoup
 
     - urlopen()을 이용해 `html` 파일을 불러오고 `BeautifulSoup`를 이용해 분석
@@ -167,6 +165,8 @@ comments: true
     print(title)
     print(wf)
     ```
+
+    <br/>
 
   - CSS 선택자 사용하기 
 
@@ -206,13 +206,17 @@ comments: true
           print("li=",li.string)
       ```
 
+      <br/>
+
+      <br/>
+
     - CSS 선택자 자세히 알아보기
 
       1. <u>태그선택자 ( 요소선택자 )</u> : 특정이름, 태그 선택
 
          ex) "ul", "div", "li" 등
 
-
+         <br/>
 
       2. <u>id 선택자</u> : id 선택 <id = "">
     
@@ -220,7 +224,7 @@ comments: true
     
          - html에서 id는 구분하는 식별자 역할. (유일함)
 
-
+<br/>
 
       3. <u>클래스 선택자</u> : 클래스 이름 선택
     
@@ -234,7 +238,7 @@ comments: true
     
              ".items.books.shoes"
 
-
+<br/>
 
       4. <u>구조 선택자</u>
     
@@ -248,9 +252,9 @@ comments: true
            - ex) 위의 예시에서 html태그의 자식 선택자는 html 바로 밑의 body
            - ex) "ul.items > li" : ul의 items 태그의 자식 중 li태그
 
+<br/>
 
-
-
+<br/>
 
     - ==따라서 선택할 때==
     
@@ -266,9 +270,9 @@ comments: true
     
       ==4) 추출 후 원하는대로 사용한다.==
 
+<br/>
 
-
-
+<br/>
 
 - 종합하여 제일 기본적인 크롤링을 해보기
 

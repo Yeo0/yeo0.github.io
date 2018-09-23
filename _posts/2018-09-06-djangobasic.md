@@ -19,11 +19,11 @@ comments: true
 4. settings.py
 5. manage.py
 
-
+<br/>
 
 ---
 
-
+<br/>
 
 #### 1. MVC, MTV
 
@@ -35,7 +35,7 @@ comments: true
 
    -> 이후 코드를 `Model` `View` `Control` 로 분류. 
 
-
+<br/>
 
    ![출처: http://djangogo.tistory.com/](https://s3.ap-northeast-2.amazonaws.com/opentutorials-user-file/module/327/1262.png)
 
@@ -44,7 +44,7 @@ comments: true
 
 ![출처:http://www.stechstar.com/user/zbxe/index.php?mid=AlgorithmPython&document_srl=51162](http://www.stechstar.com/user/zbxe/files/attach/images/3263/162/051/3b71346c7532be7fe7630bdc36b29f30.png)
 
-
+<br/>
 
 - User's Browser 의 다양한 액션 (ex. url 클릭, 데이터 입력 등 )들을 Url Dispatcher을 거쳐서 적합한 View로 연결이 됨.
 - 초록색 부분이 우리가 실제로 다루게 되는 python 파일들이다.
@@ -54,9 +54,9 @@ comments: true
   - example.html : script 파일
   - forms.py : 게시물 작성 폼 등
 
+<br/>
 
-
-
+<br/>
 
 #### 3. Project와 App
 
@@ -74,9 +74,9 @@ comments: true
   ./managy.py startup 앱이름 ~~~
   ~~~
 
-  
+  <br/>
 
-
+<br/>
 
 #### 4. Setting.py
 
@@ -94,9 +94,9 @@ comments: true
 
   `static_url` : html과 관련된 정적 파일들을 다루는 파일
 
+<br/>
 
-
-
+<br/>
 
 
 #### 5. Manage.py
@@ -117,22 +117,21 @@ comments: true
 
   `collect static - static` : 파일을 한 곳에 모음.
 
+<br/>
 
-
-
-** 참고
+> 참고
 
 8000포트 연결 - 외부 접근 불가능한 서버 연결
 
 8080포트 연결 - 외부 접근 가능한 서버 연결
 
+<br/>
 
+<br/>
 
+<br/>
 
-
-
-
-** 이미지출처
+> 이미지출처
 
 >  http://djangogo.tistory.com/entry/Djangogo-8-Django-%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%99%80-%EB%B7%B0-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0
 >

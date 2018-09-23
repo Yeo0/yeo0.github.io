@@ -1,0 +1,215 @@
+---
+layout: post
+title:  "CSS Selector"
+subtitle:   "5"
+categories: study
+tags: crawling
+comments: true
+
+
+
+
+---
+
+
+
+## 파이썬을 이용한 머신러닝, 딥러닝 실전개발 입문
+
+### 1. 크롤링과 스크레이핑
+
+<br/>
+
+#### 1-3. CSS 선택자
+
+- 위키문헌에 공개돼 있는 윤동주 작가의 작품 목록 가져오기
+
+  ```python
+  from bs4 import BeautifulSoup
+  import urllib.request as req
+  
+  url="https://ko.wikipedia.org/wiki/%ED%95%98%EB%8A%98%EA%B3%BC_%EB%B0%94%EB%9E%8C%EA%B3%BC_%EB%B3%84%EA%B3%BC_%EC%8B%9C"
+  res=req.urlopen(url)
+  
+  soup=BeautifulSoup(res,'html.parser')
+  
+  a_list=soup.select('#mw-content-text > div > ul > li a')
+  
+  for a in a_list:
+      print(a.string)
+  ```
+
+<br/>
+
+- ##### CSS 선택자 자세히 알아보기 
+
+  - BeautifulSoup에서 위치나 상태를 지정하는 서식은 지원하지 않는다.
+
+    <br/>
+
+    <선택자 기본서식>
+
+    | 서식                | 설명                        |
+    | :------------------ | --------------------------- |
+    | *                   | 모든 요소 선택              |
+    | 요소 ex)div         | 요소 이름을 기반으로 선택   |
+    | .클래스 ex).content | 클래스 이름을 기반으로 선택 |
+    | \#id 이름 ex) #body | id 속성을 기반으로 선택     |
+
+    <br/>
+
+    <선택자들의 관계를 지정하는 서식>
+
+    | 서식              | 설명                                                    |
+    | ----------------- | ------------------------------------------------------- |
+    | 선택자, 선택자    | 쉼표로 구분된 여러개의 선택자를 모두 선택               |
+    | 선택자 선택자     | 앞 선택자의 후손 중 뒤 선택자에 해당하는 것을 모두 선택 |
+    | 선택자 > 선택자   | 앞 선택자의 자손 중 뒤 선택자에 해당하는 것을 모두 선택 |
+    | 선택자 + 선택자   | 같은 계층에서 바로 뒤에 있는 요소 선택                  |
+    | 선택자1 ~ 선택자2 | 선택자1부터 선택자2까지의 요소를 모두 선택              |
+
+    <br/>
+
+    <선택자 속성을 기반으로 지정하는 서식>
+
+    | 서식                | 설명                                                         |
+    | ------------------- | ------------------------------------------------------------ |
+    | 요소[속성]          | 해당 속성을 가진 요소를 선택                                 |
+    | 요소[속성 = "값"]   | 해당 속성의 값이 지정한 값과 같은 요소를 선택                |
+    | 요소[속성 ~= "값"]  | 해당 속성의 값이 지정한 값을 단어로 포함하면 선택 (띄어쓰기로도 완전히 구분돼야함) |
+    | 요소[속성 \|= "값"] | 해당 속성의 값으로 시작하면 선택                             |
+    | 요소[속성 `= "값"]  | 해당 속성의 값이 지정한 값으로 시작하면 선택                 |
+    | 요소[속성 $= "값"]  | 해당 속성의 값이 지정한 값으로 끝나면 선택                   |
+    | 요소[속성 *= "값"]  | 해당 속성의 값이 지정한 값을 포함하고 있으면 선택            |
+
+  <br/>
+
+- CSS 선택자로 추출 연습하기
+
+  <br/>
+
+  1) 다음과 같은 html이 있다고 하자.
+
+  ```html
+  <ul id="bible">
+  	<li id="ge">Genesis</li>
+  	<li id="ex">Exodus</li>
+  	<li id="le">Leviticus</li>
+  	<li id="nu">Numbers</li>
+  	<li id="de">Deuteronomy</li>
+  </ul>
+  ```
+
+  ```python
+  from bs4 import BeautifulSoup
+  fp=open("books.html", encoding="utf-8")
+  soup=BeautifulSoup(fp,'html.parser')
+  
+  #CSS선택자로 검색하는 방법
+  sel=lambda q: print(soup.select_one(q).string)
+  
+  #def func(q):
+  #    return print(soup.select_one(q).string)
+  
+  sel("#nu")
+  sel("li#nu") #붙어서 사용
+  sel("ul > li#nu")
+  sel("#bible > #nu")
+  sel("#bible #nu")
+  sel("ul#bible > li#nu")
+  sel("li['id'='nu']")
+  sel("li:nth-of-type(4)")
+  
+  #그 밖의 방법
+  print(soup.select("li")[3].string)
+  print(soup.find_all("li")[3].string)
+  ```
+
+  <br/>
+
+  2) 다음과 같은 html이 있다고 하자.
+
+  ```html
+  <html>
+  <body>
+  	<div id="main_goods" role="page">
+  		<h1>과일과 야채</h1>
+  		<ul id="fr-list">
+  			<li class="red green" data-lo="ko">사과</li>
+  			<li class="purple" data-lo="us">포도</li>
+  			<li class="yellow" data-lo="us">레몬</li>
+  			<li class="yellow" data-lo="ko">오렌지</li>
+  
+  		</ul>
+  		<ul id="ve-list">
+  			<li class="white green" data-lo="ko">무</li>
+  			<li class="red green" data-lo="us">파프리카</li>
+  			<li class="black" data-lo="ko">가지</li>
+  			<li class="black" data-lo="us">아보카도</li>
+  			<li class="white" data-lo="cn">연근</li>
+  		</ul>
+  	</div>
+  </body>
+  </html>
+  ```
+
+  ```python
+  from bs4 import BeautifulSoup
+  fp=open('fruits-vegetables.html',encoding='utf-8')
+  
+  soup=BeautifulSoup(fp,'html.parser')
+  
+  #CSS선택자로 추출하기
+  print(soup.select_one("li:nth-of-type(8)").string)
+  print(soup.select_one("#ve-list li:nth-of-type(4)").string)
+  print(soup.select_one("#ve-list > li:nth-of-type(4)").string)
+  print(soup.select("#ve-list li.black")[1].string)
+  print(soup.select("#ve-list > li[data-lo='us']")[1].string)
+  
+  #find메소드로 추출하기
+  cond={'data-lo':'us', 'class':'black'}
+  print(soup.find(id='ve-list').find('li',cond).string)
+  ```
+
+  - *find()* 메소드 : 여러개의 조건 한번에 지정할 수 있음 , 연속으로 사용하면 이전에 추출한 요소에 추가적인 조건을 지정할 수 있다.
+
+  <br/>
+
+- 정규 표현식과 함께 조합하기
+
+  ex) <a>태그 중에서 https 주소 링크 추출
+
+  ```python
+  from bs4 import BeautifulSoup
+  import re # 정규표현식 쓸 때
+  
+  html='''
+  <ul>
+    <li><a href="hoge.html">hoge</li>
+    <li><a href="https://example.com/fuga">fuga*</li>
+    <li><a href="https://example.com/foo">foo*</li>
+    <li><a href="https://example.com/aaa">aaa</li>
+  </ul>
+  '''
+  
+  soup=BeautifulSoup(html, 'html.parser')
+  
+  #정규표현식으로 href에서 https인 것 추출하기
+  li=soup.find_all(href=re.compile(r"^https://")) #compile()로 정규표현식 생성
+  
+  for e in li:
+      print(e.attrs['href'])
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
