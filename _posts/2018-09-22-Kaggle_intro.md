@@ -17,9 +17,7 @@ comments: true
 
 ---
 
-[목차](#index)
-
-[TOC]
+{:TOC}
 
 ---
 
