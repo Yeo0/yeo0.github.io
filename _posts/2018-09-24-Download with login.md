@@ -84,7 +84,7 @@ comments: true
 
       크롬의 개발자도구 - [Network]탭을 누르면 다음과 같은 창을 볼 수 있다
 
-      ![image](../assets/img/login_1.png)
+      ![image](/assets/img/login_1.png)
 
        <br/>
 
@@ -104,7 +104,7 @@ comments: true
 
       <br/>
 
-      ![image](../assets/img/login_2.png)
+      ![image](/assets/img/login_2.png)
 
       <br/>
 
