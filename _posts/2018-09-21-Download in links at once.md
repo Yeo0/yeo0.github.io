@@ -54,7 +54,7 @@ comments: true
 
 ##### 2) 재귀적으로 *HTML*페이지를 처리하는 방법
 
-![image](../assets/img/html structure.jpg)
+![image](/assets/img/html structure.jpg)
 
 
 
