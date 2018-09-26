@@ -14,7 +14,7 @@ comments: true
 
 ## 파이썬을 이용한 머신러닝, 딥러닝 실전개발 입문
 
-##### link: [*github*](https://github.com/Yeo0/Study/blob/master/Web%20Crawling/1-2.%20BeautifulSoup%EB%A1%9C%20%EC%8A%A4%ED%81%AC%EB%A0%88%EC%9D%B4%ED%95%91%ED%95%98%EA%B8%B0.ipynb)
+##### link: [*github*](https://github.com/Yeo0/Web-Crawling/blob/master/1-2.%20BeautifulSoup%EB%A1%9C%20%EC%8A%A4%ED%81%AC%EB%A0%88%EC%9D%B4%ED%95%91%ED%95%98%EA%B8%B0.ipynb)
 
 <br/>
 
