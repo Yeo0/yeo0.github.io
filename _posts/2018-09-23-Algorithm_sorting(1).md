@@ -14,7 +14,7 @@ comments: true
 
 ##### <br/>
 
-#### [github](https://github.com/Yeo0/Study/tree/master/Algorithm)
+#### [github](https://github.com/Yeo0/Algorithm)
 
 #### [이론](https://github.com/Yeo0/Study/blob/master/Algorithm/Algorithm_1.pdf)
 
