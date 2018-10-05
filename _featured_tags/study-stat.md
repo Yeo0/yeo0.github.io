@@ -4,5 +4,5 @@ title: Statistics
 slug: stat
 category: study
 menu: false
-order: 3
+order: 4
 ---

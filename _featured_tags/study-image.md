@@ -1,10 +1,11 @@
 ---
 layout: tag-blog
-title: Kaggle
-slug: kaggle
+title: Image
+slug: image
 category: study
 menu: false
-order: 3
+order: 2
+
 
 ---
 
