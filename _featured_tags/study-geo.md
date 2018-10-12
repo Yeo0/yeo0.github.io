@@ -1,10 +1,8 @@
 ---
 layout: tag-blog
-title: Kaggle
-slug: kaggle
+title: Geo
+slug: geo
 category: study
 menu: false
-order: 4
-
+order: 2
 ---
-
