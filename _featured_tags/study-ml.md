@@ -1,8 +1,10 @@
 ---
 layout: tag-blog
-title: Statistics
-slug: stat
+title: Machine Learning	
+slug: ml
 category: study
 menu: false
 order: 5
+
 ---
+
