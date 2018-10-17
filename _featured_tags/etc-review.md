@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
-title: Article
-slug: article
+title: Review
+slug: review
 category: etc
 menu: false
 order: 1
