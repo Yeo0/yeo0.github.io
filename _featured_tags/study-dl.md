@@ -1,9 +1,10 @@
 ---
 layout: tag-blog
-title: Image
-slug: image
+title: Deep Learning	
+slug: dl
 category: study
 menu: false
-order: 4
+order: 2
+
 ---
 
