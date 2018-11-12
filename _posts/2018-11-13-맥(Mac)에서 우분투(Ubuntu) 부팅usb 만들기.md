@@ -14,7 +14,7 @@ comments: true
 
 <br/>
 
-#### 1. Ubuntu Download
+### 1. Ubuntu Download
 
 **http://mirror.kakao.com/ubuntu-releases/bionic/**
 
@@ -23,7 +23,7 @@ comments: true
 
 <br/>
 
-#### 2. Iso -> Img
+### 2. Iso -> Img
 
 - 부팅디스크 작업시 img파일로 진행되기 때문에 확장자 변환이 필요합니다.
 - *hdiutil convert -format UDRW -o [변환할 img 경로, 파일명] \[다운받은 iso 파일 경로, 파일명]*
@@ -39,7 +39,7 @@ $ hdiutil convert -format UDRW -o ~/Downloads/ubuntu-18.04.1-desktop-amd64.img ~
 
 <br/>
 
-#### 3. Disk number 확인
+### 3. Disk number 확인
 
 - diskutil list 명령어로 현재 연결된 디바이스 장치들을 확인합니다.
 
@@ -57,7 +57,7 @@ $ hdiutil convert -format UDRW -o ~/Downloads/ubuntu-18.04.1-desktop-amd64.img ~
 
 <br/>
 
-#### 4. 부팅USB 제작
+### 4. 부팅USB 제작
 
 - USB의 마운트를 해제합니다. (해제하지 않으면 사용중이라고 떠 설치할 수 없습니다.)
 - diskutil unmountDisk /dev/disk숫자
@@ -84,13 +84,13 @@ $ sudo dd if=~/Downloads/ubuntu-16.04.1-desktop-amd64.img of=/dev/disk5 bs=1m
 
 ---
 
-### 부팅 USB 다시 사용하기
+## 부팅 USB 다시 사용하기
 
 - USB포맷을 진행해야 원래 USB로 사용할 수 있습니다.
 
 <br/>
 
-#### 1. Disk number 확인
+### 1. Disk number 확인
 
 - 디스크 설치할 때의 방식과 동일합니다. 
 - 현재 USB의 disk number를 아래의 명령어로 확인합니다.
@@ -101,7 +101,7 @@ $ disktutil list
 
 <br/>
 
-#### 2. USB 포맷
+### 2. USB 포맷
 
 - *diskutil eraseDisk [파일 포맷] \[포맷 후 disk 이름] \[/dev/disk숫자]*
 - 파일 포맷에는 아래와 같은 형식을 사용할 수 있습니다.
