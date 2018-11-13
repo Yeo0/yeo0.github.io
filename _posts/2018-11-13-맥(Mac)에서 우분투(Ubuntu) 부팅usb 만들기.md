@@ -2,7 +2,7 @@
 layout: post
 title:  "맥(Mac)에서 우분투(Ubuntu) 부팅usb 만들기"
 subtitle:   "1"
-categories: etc
+categories: com
 tags: os
 comments: true
 

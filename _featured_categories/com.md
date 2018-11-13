@@ -1,10 +1,10 @@
 ---
 layout: list
-title: Study
-slug: study
+title: Computer
+slug: com
 menu: true
 submenu: true
 order: 1
 description: >
-  공부한 내용들을 정리합니다.
+  컴퓨터 관련 지식들.
 ---

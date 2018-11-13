@@ -4,7 +4,7 @@ title: Programming
 slug: pg
 menu: true
 submenu: true
-order: 2
+order: 3
 description: >
-  구현 및 코드
+  Programming Language 관련 내용.
 ---

@@ -2,7 +2,7 @@
 layout: tag-blog
 title: Os
 slug: os
-category: etc
+category: com
 menu: false
 order: 1
 ---
