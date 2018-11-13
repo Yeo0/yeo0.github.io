@@ -2,7 +2,7 @@
 layout: post
 title:  "정리 _ BeautifulSoup Find_All"
 subtitle:   "6"
-categories: study
+categories: data
 tags: crawling
 comments: true
 

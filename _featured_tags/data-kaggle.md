@@ -2,7 +2,7 @@
 layout: tag-blog
 title: Kaggle
 slug: kaggle
-category: study
+category: data
 menu: false
 order: 5
 ---

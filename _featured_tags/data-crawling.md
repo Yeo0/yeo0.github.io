@@ -2,7 +2,7 @@
 layout: tag-blog
 title: Crawling
 slug: crawling
-category: study
+category: data
 menu: false
 order: 1
 ---

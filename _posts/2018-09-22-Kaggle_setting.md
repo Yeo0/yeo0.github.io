@@ -2,7 +2,7 @@
 layout: post
 title:  "Kaggle_setting"
 subtitle:   "2"
-categories: study
+categories: data
 tags: kaggle
 comments: true
 

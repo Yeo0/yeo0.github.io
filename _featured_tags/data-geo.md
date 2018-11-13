@@ -2,7 +2,7 @@
 layout: tag-blog
 title: Geo
 slug: geo
-category: study
+category: data
 menu: false
 order: 3
 ---

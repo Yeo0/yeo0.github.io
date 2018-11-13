@@ -2,7 +2,7 @@
 layout: post
 title:  "Dataprocessing for machine learning"
 subtitle:   "1"
-categories: study
+categories: data
 tags: crawling
 comments: true
 

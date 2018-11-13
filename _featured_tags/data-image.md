@@ -2,7 +2,7 @@
 layout: tag-blog
 title: Image
 slug: image
-category: study
+category: data
 menu: false
 order: 4
 ---
