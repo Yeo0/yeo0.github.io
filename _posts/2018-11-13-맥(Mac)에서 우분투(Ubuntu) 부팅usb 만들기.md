@@ -16,10 +16,14 @@ comments: true
 
 ### 1. Ubuntu Download
 
-**http://mirror.kakao.com/ubuntu-releases/bionic/**
+**우분투 16.04 lts** [링크](http://releases.ubuntu.com/16.04/)
 
-- 위의 링크는 우분투 18.04 lts 를 다운받는 링크입니다.
-- 원하는 버전, desktop 나 server 의 .iso 파일을 다운 받아야 합니다.
+**우분투 18.04 lts** [링크](http://mirror.kakao.com/ubuntu-releases/bionic/)
+
+- 원하는 버전, desktop 나 server 의 .iso 파일을 다운 받으면 됩니다.
+
+- 개인적으로 버전때문에 삽질하고싶지 않아서 18.04를 깔았다가 16.04를 다시 깔았습니다ㅠ.ㅠ
+
 
 <br/>
 
