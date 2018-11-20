@@ -22,7 +22,7 @@ comments: true
 
 - 원하는 버전, desktop 나 server 의 .iso 파일을 다운 받으면 됩니다.
 
-- 개인적으로 버전때문에 삽질하고싶지 않아서 18.04를 깔았다가 16.04를 다시 깔았습니다ㅠ.ㅠ
+- 개인적으로 Cuda버전때문에 삽질하고싶지 않아서 18.04를 깔았다가 16.04를 다시 깔았습니다ㅠ.ㅠ
 
 
 <br/>
@@ -76,7 +76,7 @@ $ diskutil unmountDisk /dev/disk5
 - 저의 경우 다음과 같이 사용했습니다.
 
 ```
-$ sudo dd if=~/Downloads/ubuntu-16.04.1-desktop-amd64.img of=/dev/disk5 bs=1m
+$ sudo dd if=~/Downloads/ubuntu-18.04.1-desktop-amd64.img of=/dev/disk5 bs=1m
 ```
 
 <br/>
