@@ -12,7 +12,9 @@ comments: true
 
 
 
-### 알고리즘 2. DFS / BFS<br/>
+### 알고리즘 2. DFS / BFS
+
+---
 
 #### [github](https://github.com/Yeo0/Data-structure)
 
