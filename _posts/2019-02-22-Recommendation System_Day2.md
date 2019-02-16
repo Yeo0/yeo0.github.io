@@ -162,7 +162,7 @@ $$
 
 
 
-![image-20190217040840711](/assets/img/rs2_8jpg.png)
+![image-20190217040840711](/assets/img/rs2_8.jpg)
 
 *m<sup>(j)</sup> : user j 에 의해 rating 된 movie 수 = number of movies*
 
