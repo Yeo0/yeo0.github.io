@@ -64,11 +64,11 @@ Romance : Love at last, Romance forever, Cute puppies of love
 
 Action : Nonstop car chases, Swords vs. karate
 
-![image-20190217005034266](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190217005034266.png)
+![image-20190217005034266](/Users/yeoyoung/Documents/GitHub/yeo0.github.io/assets/img/rs2_1.jpg)
 
-![image-20190217005238977](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190217005238977.png)
+![image-20190217005238977](/Users/yeoyoung/Documents/GitHub/yeo0.github.io/assets/img/rs2_2.jpg)
 
-![image-20190217012259706](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190217012259706.png)
+![image-20190217012259706](/Users/yeoyoung/Documents/GitHub/yeo0.github.io/assets/img/rs2_3.jpg)
 
 *n<sub>u</sub> : user 의 수*
 
@@ -103,7 +103,7 @@ Action : Nonstop car chases, Swords vs. karate
 
 
 
-![image-20190217022358575](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190217022358575.png)
+![image-20190217022358575](/Users/yeoyoung/Documents/GitHub/yeo0.github.io/assets/img/rs2_4.jpg)
 
 <br/>
 
@@ -113,7 +113,7 @@ Action : Nonstop car chases, Swords vs. karate
 
 
 
-![image-20190217025839645](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190217025839645.png)
+![image-20190217025839645](/Users/yeoyoung/Documents/GitHub/yeo0.github.io/assets/img/rs2_5.jpg)
 
 *n : feature의 수. x<sup>(i)</sup> 에서 constant(x<sub>0</sub>) 제외한 개수.*
 
@@ -136,7 +136,7 @@ $$
 
 - In order to make predictions here's one thing that we do which is that we could treat predicting the ratings of each user as a separate linear regression problem. 
 
-![image-20190217030307715](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190217030307715.png)*θ<sup>(j)</sup> : parameter vector*
+![image-20190217030307715](/Users/yeoyoung/Documents/GitHub/yeo0.github.io/assets/img/rs2_6.jpg)*θ<sup>(j)</sup> : parameter vector*
 
 *(θ<sup>(j)</sup>)<sup>T</sup>x<sup>(i)</sup> : predictied rating*
 
@@ -144,7 +144,7 @@ $$
 
 예를 들어 Alice가 Cute puppie of love를 어떻게 생각하는지 보려면
 
-![image-20190217033040815](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190217033040815.png)
+![image-20190217033040815](/Users/yeoyoung/Documents/GitHub/yeo0.github.io/assets/img/rs2_7.jpg)
 $$
 (θ^{(1)})^{T}x^{(3)} = 0*1+5*0.99+0*0 = 4.95
 $$
@@ -162,7 +162,7 @@ $$
 
 
 
-![image-20190217040840711](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190217040840711.png)
+![image-20190217040840711](/Users/yeoyoung/Documents/GitHub/yeo0.github.io/assets/img/rs2_8jpg.png)
 
 *m<sup>(j)</sup> : user j 에 의해 rating 된 movie 수 = number of movies*
 
@@ -178,7 +178,7 @@ Sumension(예측값 ( (θ<sup>(j)</sup>)<sup>T</sup>x<sup>(i)</sup> ) - 실제�
 
 다시 정리하면 아래와 같다.
 
-![img](https://scontent.ficn6-1.fna.fbcdn.net/v/t1.15752-9/51348006_1989648414494593_6632530498415493120_n.jpg?_nc_cat=106&_nc_ht=scontent.ficn6-1.fna&oh=36f759010a10cdea211cf23c762b6a0b&oe=5CE90034)
+![img](/Users/yeoyoung/Documents/GitHub/yeo0.github.io/assets/img/rs2_9jpg.png)
 
 user j의 parameter인 θ<sup>(j)</sup> 를 학습하기 위해 이 optimization objective의 θ<sup>(j)</sup> 를 최소화한다.
 
@@ -194,7 +194,7 @@ k=0 일 때 regularization term이 필요가 없다.
 
 - In order to actually do the minimization, if you were to derive the gradient descent update, these are the equations that you would get. So you take theta j, k, and subtract from an alpha, which is the learning rate, times these terms over here on the right. 
 
-![image-20190217042913452](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190217042913452.png)
+![image-20190217042913452](/Users/yeoyoung/Documents/GitHub/yeo0.github.io/assets/img/rs2_10.jpg)
 
 
 
