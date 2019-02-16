@@ -70,6 +70,10 @@ Action : Nonstop car chases, Swords vs. karate
 
 ![image-20190217012259706](/assets/img/rs2_3.jpg)
 
+*i : movie index*
+
+*j : user index*
+
 *n<sub>u</sub> : user 의 수*
 
 *n<sub>m</sub> : movie 의 수*
