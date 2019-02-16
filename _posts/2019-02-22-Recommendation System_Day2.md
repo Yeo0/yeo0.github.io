@@ -145,9 +145,9 @@ $$
 예를 들어 Alice가 Cute puppie of love를 어떻게 생각하는지 보려면
 
 ![image-20190217033040815](/assets/img/rs2_7.jpg)
-$$
-(θ^{(1)})^{T}x^{(3)} = 0*1+5*0.99+0*0 = 4.95
-$$
+
+*(θ<sup>(1)</sup>)<sup>T</sup>x<sup>(3)</sup> = 01 + 50.99 + 00 = 4.95*
+
 이므로 Alice는 Cute puppies of love를 보고 4.95점을 낼 것이라는 결론을 낼 수 있다.
 
 이렇듯 사람마다 각기 다른 linear regression을 갖게 될 것이다.
