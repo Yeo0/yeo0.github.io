@@ -25,7 +25,7 @@ comments: true
 
 ---
 
-### [Coursera 16-1 Problem Formulation (7:54)](https://youtu.be/gnlq-1Zjh2M)
+### [Coursera 16-1 Problem Formulation (7:54)](https://www.coursera.org/learn/machine-learning/lecture/Rhg6r/problem-formulation )
 
 #### Recommendation system이 중요한 이유
 
@@ -94,7 +94,7 @@ Action : Nonstop car chases, Swords vs. karate
 
 ---
 
-### [Coursera 16-2 Content Based Recommendations (14:31)](https://youtu.be/c0ZPDKbYzx0)
+### [Coursera 16-2 Content Based Recommendations (14:31)](https://www.coursera.org/learn/machine-learning/lecture/uG59z/content-based-recommendations)
 
 우리가 하고 싶은 것은 이런 이용자들을 보면서 그들이 아직 rating 안한 다른 영화들을 어떻게 rating할지 예측하는 것이다. 이를 위한 첫번째 접근법은 Content based recommendation이라 한다.
 
