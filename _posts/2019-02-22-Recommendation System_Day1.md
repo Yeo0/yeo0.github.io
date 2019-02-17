@@ -52,7 +52,7 @@ comments: true
 
 사람들의 type, 영화 class가 많지 않다는 것을 가정. 즉, drama를 얼마나 좋아하느냐, action을 얼마나 좋아하느냐 등등의 요소들이 각 유저들의 rating을 결정한다는 의미이다. 만약 전체 점수를 S, factor를 f<sub>i</sub>, 각각의 factor마다 개인이 가지는 가중치(rating)를 a<sub>i</sub>, 전체 n개의 factor가 있다고 가정. 한 사람이 rating하게 될 점수의 예상치를 아래와 같이 나타낼 수 있다.
 
-![image-20190216193301460](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190216193301460.png)
+![image-20190216193301460](/assets/img/rs1_1.jpg)
 
 이런 몇 개의 basic classes의 combination으로 user의 rating이 표현이 될 수 있다면, basic한 몇 개의 요소로 rating이 결정된다 라고 설명할 수 있으며 약간 수학적으로 설명을 하자면 Netflix Matrix가 몇 안되는 factor들을 통해 표현할 수 있다는 의미가 되므로 Netflix Matrix가 low rank를 가지고 있다라고 표현할 수 있다.
 

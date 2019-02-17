@@ -172,9 +172,13 @@ $$
 
 
 
-Sumension(예측값 ( (θ<sup>(j)</sup>)<sup>T</sup>x<sup>(i)</sup> ) - 실제값 ( y<sup>(i,j)</sup> ))^2 : MSE  + regularization term 을  minimize하는 것이 θ<sup>(j)</sup> 를 추정하는 Optimization objective이다. 여기서 m<sup>(j)</sup> 의 경우 constant라 minimize 하는 데에 영향을 미치지 못하므로 지워도 무방하다. 
+위의 식은 한개의 θ<sup>(j)</sup> 에 대한 식, 아래 식은 모든 θ<sup>(j)</sup> 에 관한 식이다.
+
+Sumension(예측값 ( (θ<sup>(j)</sup>)<sup>T</sup>x<sup>(i)</sup> ) - 실제값 ( y<sup>(i,j)</sup> ))^2 : MSE  + regularization term (feature가 너무 커지지 않도록) 을  minimize하는 것이 θ<sup>(j)</sup> 를 추정하는 Optimization objective이다. 여기서 m<sup>(j)</sup> 의 경우 constant라 minimize 하는 데에 영향을 미치지 못하므로 지워도 무방하다. 
 
 위의 식을 minimize하면 user j의 rating 대한 예측을 할 parameter vector θ<sup>(j)</sup> 에 대한 꽤 좋은 추정치를 얻을 수 있다.
+
+
 
 - If you minimize this as a function of theta j you get a good solution, you get a pretty good estimate of a parameter vector theta j with which to make predictions for user j's movie ratings. 
 
