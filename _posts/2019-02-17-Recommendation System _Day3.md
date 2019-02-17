@@ -28,9 +28,9 @@ comments: true
 
 ### [Coursera 16-3 Collaborative Filtering (10:14)](https://www.coursera.org/learn/machine-learning/lecture/2WoBV/collaborative-filtering )
 
-#### 
 
-Contents based recommendation은 굉장히 비효율 적이다. 데이터 수가 많아지면 feature을 얻기에도 힘들다.비효율적. 따라서 오늘은 **feature x1, x2을 모른다고 가정하고 문제를 해결할 것**이다. 그 전에 각 user들 에게서 그들의 취향을 얻어냈다고 가정해 보자.
+
+Contents based recommendation은 굉장히 비효율 적이다. 데이터 수가 많아지면 feature을 얻기에도 힘들다. 따라서 오늘은 **feature x1, x2을 모른다고 가정하고 문제를 해결할 것**이다. 그 전에 각 user들 에게서 그들의 취향을 얻어냈다고 가정해 보자.
 
 
 
@@ -120,7 +120,7 @@ Collaborative filtering은 큰 user set과 함께 쓰일 때, 모든 user에 대
 
 ![image-20190217162136808](/assets/img/rs3_6.jpg)
 
-J는 두 Optimization objective 을 합친 cost function이다.
+J는 두 개의 Optimization objective 을 합친 cost function이다.
 
 <br/>
 
@@ -156,7 +156,7 @@ J를 보면 흥미로운 속성을 가지고 있는데, x의 constant들을 고�
 
 <br/>
 
-또한 이 J의 특징은 이전엔 x<sub>0</sub> =1 이라는 intercept를 정의했었다면 이젠 intercept없이 실제 사용되는 feature들만 이용하기 때문에 x![\in \!\,](https://wikimedia.org/api/rest_v1/media/math/render/svg/7bf13d1313b769789680da2f349d076e20881a75)R<sup>n</sup> 이 된다. (이전엔  x![\in \!\,](https://wikimedia.org/api/rest_v1/media/math/render/svg/7bf13d1313b769789680da2f349d076e20881a75)R<sup>n+1</sup> ) θ역시  θ![\in \!\,](https://wikimedia.org/api/rest_v1/media/math/render/svg/7bf13d1313b769789680da2f349d076e20881a75)R<sup>n</sup> 이 된다. (x<sub>0</sub> 가 없다면 θ<sub>0</sub> 도 없기 때문). 이것이 가능한 이유는 이제 모든 feature들을 학습시키면서 x<sub>0</sub> 도 스스로 학습하여 선택할 수 있게끔 하기 때문이다. 따라서 k=0일 때의 조건 없이 동일한 식을 사용한다.
+또한 이 J의 특징은 이전엔 x<sub>0</sub> =1 이라는 intercept를 정의했었다면 이젠 intercept없이 실제 사용되는 feature들만 이용하기 때문에 x∈R<sup>n</sup> 이 된다. (이전엔  x∈R<sup>n+1</sup> ) θ역시  θ∈R<sup>n</sup> 이 된다. (x<sub>0</sub> 가 없다면 θ<sub>0</sub> 도 없기 때문). 이것이 가능한 이유는 이제 모든 feature들을 학습시키면서 x<sub>0</sub> 도 스스로 학습하여 선택할 수 있게끔 하기 때문이다. 따라서 k=0일 때의 조건 없이 동일한 식을 사용한다.
 
 <br/>
 
