@@ -13,7 +13,7 @@ url:                 https://yeo0.github.io
 baseurl:             ""
 
 # A very short description of your page
-tagline:             통계를 잘하는 엔지니어
+tagline:             통계쟁이 엔지니어
 
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
