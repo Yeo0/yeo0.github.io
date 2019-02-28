@@ -104,7 +104,7 @@ MF의 cost function을 다시 보면, 우리는 두 가지 유형의 변수(U와
 
 실제 cost function에는 regularization term이 포함되어 있기 때문에 식이 약간 더 길다. 2단계 프로세스에 따르면 cost function은 아래와 같이 두 개의 cost function으로 나눌 수 있다.
 
-![\forall{u_i}: J\left({u_i}\right) = ||R_i - {u_i}\times{P^T}||_2 + \lambda \cdot ||u_i||_2](https://s0.wp.com/latex.php?latex=%5Cforall%7Bu_i%7D%3A+J%5Cleft%28%7Bu_i%7D%5Cright%29+%3D+%7C%7CR_i+-+%7Bu_i%7D%5Ctimes%7BP%5ET%7D%7C%7C_2+%2B+%5Clambda+%5Ccdot+%7C%7Cu_i%7C%7C_2&bg=ffffff&fg=5e5e5e&s=0)
+![img](https://s0.wp.com/latex.php?latex=%5Cforall%7Bu_i%7D%3A+J%5Cleft%28%7Bu_i%7D%5Cright%29+%3D+%7C%7CR_i+-+%7Bu_i%7D%5Ctimes%7BP%5ET%7D%7C%7C_2+%2B+%5Clambda+%5Ccdot+%7C%7Cu_i%7C%7C_2&bg=ffffff&fg=5e5e5e&s=0)
 
 ![img](https://s0.wp.com/latex.php?latex=%5Cforall%7Bp_j%7D%3A+J%5Cleft%28%7Bp_j%7D%5Cright%29+%3D+%7C%7CR_i+-+U%5Ctimes%7Bp_j%5ET%7D%7C%7C_2+%2B+%5Clambda+%5Ccdot+%7C%7Cp_j%7C%7C_2&bg=ffffff&fg=5e5e5e&s=0)
 
