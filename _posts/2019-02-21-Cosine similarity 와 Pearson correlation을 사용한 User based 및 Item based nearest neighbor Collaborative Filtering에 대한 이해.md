@@ -420,15 +420,19 @@ user based와 아이디어는 비슷하나 유저를 기준으로 아이템을 �
 
 μ<sub>u</sub>는 I<sub>u</sub> ∩ I<sub>v</sub> (공통으로 rating된 item)의 rating만 놓고 계산해야 하지만, 그것이 현실에서 상당한 차이를 만들것 같지는 않다. 
 
-2) rating이 거의 같은 item이 없는 user들이 매우 높은 similarity를 가질 것이라는 점이다. 하나의 rating에 대한 Pearson correlation는 정의되지 않는다. 그러나 각 유저들이 많은 item에 대해 rating을 했을 때, 이들이 두개의 동일한 item에 대해 rating을 했다는 것은 그들이 완전히 비슷하다고 말할 수 있는 좋은 근거가 아니다. 이 문제를 다루기 위한 전형적인 방법은 similarity에 min(|I<sub>u</sub>+I<sub>v</sub>|,50) / 50 를 곱하여 가중치를 주는 것이다. (Herlocker et al., 1999) 이를 통해 user들이 최소한 50여개의 rating에 공통점을 가질때까지 similarity를 선형적으로 감소시킨다. 이것은 다소 임시적인 방법이지만, Pearson correlation을 이용하여 추천 시스템의 성능을 향상시킨다.
+<br/>
+
+2) rating이 거의 같은 item이 없는 user들이 매우 높은 similarity를 가질 것이라는 점이다. 하나의 rating에 대한 Pearson correlation는 정의되지 않는다. 그러나 각 유저들이 많은 item에 대해 rating을 했을 때, 이들이 두개의 동일한 item에 대해 rating을 했다는 것은 그들이 완전히 비슷하다고 말할 수 있는 좋은 근거가 아니다. 이 문제를 다루기 위한 전형적인 방법은 similarity에 min(\|I<sub>u</sub>+I<sub>v</sub>\|,50) / 50 를 곱하여 가중치를 주는 것이다. (Herlocker et al., 1999) 이를 통해 user들이 최소한 50여개의 rating에 공통점을 가질때까지 similarity를 선형적으로 감소시킨다. 이것은 다소 임시적인 방법이지만, Pearson correlation을 이용하여 추천 시스템의 성능을 향상시킨다.
 
 <br/>
 
-그래서 코사인은? 첫째, mean-centered vectors에 대한 Cosine similarity는 Pearson correlation과 매우 유사하다. (r<sub>ui</sub>^는 rating r<sub>ui</sub>–μ<sub>u</sub> 을 정규화 한 것)
+그래서 코사인은? 첫째, mean-centered vectors에 대한 Cosine similarity는 Pearson correlation과 매우 유사하다. (r<sub>ui</sub> \^는 rating r<sub>ui</sub>–μ<sub>u</sub> 을 정규화 한 것)
 
 ![image-20190223022423186](/assets/img/rs6_26.png)
 
-<u>만약 우리가  I<sub>u</sub> ∩ I<sub>v</sub> (공통으로 rating된 item)를 합한다면, 정확히 Pearson correlation과 일치</u>한다. <u>그러나 만약 user u가 item i에 대한 rating이 없을 때마다 r<sub>ui</sub>^=0으로 'I<sub>u</sub> ∪ I<sub>v</sub> 를 합한다면 상황은 달라진다.</u> 유저가 정확히 같은 item에 rating 한 경우, 그것은 pearson correlation을 유지한다. 그러나 한명의 user만 rating을 하고 다른 user는 rating하지 않았다면, 해당 rating은 분자와는 멀어지지만 분모에는 여전히 영향을 미친다. (0을 곱하기 때문) 그래서 이 similarity function는 공동으로 rating한 item / user item set sizes = (|I<sub>u</sub> ∩ I<sub>v</sub>| / √|I<sub>u</sub>|√I<sub>v</sub>|)에 기반하여 스스로 감소한다. (rating 이 연산에 영향을 미치기 때문에 엄격한 linear scaling은 아니지만, 이 프레임은 기본 아이디어를 전달하는 데 유용하다고 생각) 오프라인 실험에서는 이런 다이나믹한 self-damping이 유의한 가중치보다 더 효과적이고, 50이라는 상당히 임의적인 cutoff에 의존하지 않는다는 추가적인 장점도 있다.
+
+
+<u>만약 우리가  I<sub>u</sub> ∩ I<sub>v</sub> (공통으로 rating된 item)를 합한다면, 정확히 Pearson correlation과 일치</u>한다. <u>그러나 만약 user u가 item i에 대한 rating이 없을 때마다 r<sub>ui</sub>\^=0으로 I<sub>u</sub> ∪ I<sub>v</sub> 를 합한다면 상황은 달라진다.</u> 유저가 정확히 같은 item에 rating 한 경우, 그것은 pearson correlation을 유지한다. 그러나 한명의 user만 rating을 하고 다른 user는 rating하지 않았다면, 해당 rating은 분자와는 멀어지지만 분모에는 여전히 영향을 미친다. (0을 곱하기 때문) 그래서 이 similarity function는 공동으로 rating한 item / user item set sizes = (\|I<sub>u</sub> ∩ I<sub>v</sub>\| / √\|I<sub>u</sub>\|√I<sub>v</sub>\|)에 기반하여 스스로 감소한다. (rating 이 연산에 영향을 미치기 때문에 엄격한 linear scaling은 아니지만, 이 프레임은 기본 아이디어를 전달하는 데 유용하다고 생각) 오프라인 실험에서는 이런 다이나믹한 self-damping이 유의한 가중치보다 더 효과적이고, 50이라는 상당히 임의적인 cutoff에 의존하지 않는다는 추가적인 장점도 있다.
 
 user-user CF(Breese et al., [1998])를 위해 cosine similarity를 사용한 최초의 연구는 similarity를 계산하기 전에 mean-center data 가 아니었다. similarity 계산을 위한 mean centering은 중심은 item-item 협업 필터링 전까지 괜찮은 visibility가 없었고, 자주 user-user backport되지 않았다. 
 
