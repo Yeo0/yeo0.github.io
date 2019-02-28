@@ -112,7 +112,7 @@ MF의 cost function을 다시 보면, 우리는 두 가지 유형의 변수(U와
 
 ![img](https://s0.wp.com/latex.php?latex=%7Bu_i%7D+%3D+%7B%5Cleft%28+%7B%7BP%5ET%7D+%5Ctimes+P+%2B+%5Clambda+I%7D+%5Cright%29%5E%7B+-+1%7D%7D+%5Ctimes+%7BP%5ET%7D+%5Ctimes+%7BR_i%7D&bg=ffffff&fg=5e5e5e&s=0)
 
-![{p_j} = {\left( {{U^T} \times U + \lambda I} \right)^{ - 1}} \times {U^T} \times {R_j}](https://s0.wp.com/latex.php?latex=%7Bp_j%7D+%3D+%7B%5Cleft%28+%7B%7BU%5ET%7D+%5Ctimes+U+%2B+%5Clambda+I%7D+%5Cright%29%5E%7B+-+1%7D%7D+%5Ctimes+%7BU%5ET%7D+%5Ctimes+%7BR_j%7D&bg=ffffff&fg=5e5e5e&s=0)
+![img](https://s0.wp.com/latex.php?latex=%7Bp_j%7D+%3D+%7B%5Cleft%28+%7B%7BU%5ET%7D+%5Ctimes+U+%2B+%5Clambda+I%7D+%5Cright%29%5E%7B+-+1%7D%7D+%5Ctimes+%7BU%5ET%7D+%5Ctimes+%7BR_j%7D&bg=ffffff&fg=5e5e5e&s=0)
 
 
 
