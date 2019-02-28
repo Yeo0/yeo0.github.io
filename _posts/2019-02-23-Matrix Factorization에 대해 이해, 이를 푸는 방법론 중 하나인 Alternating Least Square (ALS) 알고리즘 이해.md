@@ -148,13 +148,13 @@ where ![{w_{i,j}} = \left\{ {\begin{array}{*{20}{c}}{\begin{array}{*{20}{c}}1&{{
 
 그 후, item i에 대한 유저 u의 rating을 예측하기 위해서 우리는 단순히 *r<sub>ui</sub> ≈ x<sup>T</sup><sub>u </sub>y<sub>i</sub>* 를 예측한다. 이것을 행렬형태로 만들 수 있는데, x<sub>1</sub>,..., x<sub>n</sub> ∈ R<sup>k</sup> 가 유저들에 대한 factor들이 되게 하고 y<sub>1</sub>,..., y<sub>m</sub> ∈ R<sup>k</sup> 가 그 아이템에 대한 factor들이 되게 한다. 그 후, k × n user matrix X와 k × m item matrix Y를 다음과 같이 정의한다.
 
-![image-20190228190525836](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190228190525836.png)
+![image-20190228190525836](/assets/img/rs8_1.png)
 
 
 
 우리의 목표는 완전한 rating matrix인 R ≈ X<sup>T</sup> Y를 추정하는 것이다. 우리는 이 문제를 <u>objective function을 최소화 하고 최적의 X와 Y를 찾는 것을 목표로 하는 최적화 문제</u>로 만들 수 있다. 특히, 우리는 observed ratings의 Least Squares error (최소 제곱 오차)를 최소화하는 것을 목표로 한다.
 
-![image-20190228192726273](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190228192726273.png)
+![image-20190228192726273](/assets/img/rs8_2.png)
 
 
 
@@ -166,7 +166,7 @@ where ![{w_{i,j}} = \left\{ {\begin{array}{*{20}{c}}{\begin{array}{*{20}{c}}1&{{
 
 우리의 objective function에 대하여 ALS 알고리즘은 다음과 같다.
 
-![image-20190228194103491](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190228194103491.png)
+![image-20190228194103491](/assets/img/rs8_3.png)
 
 알고리즘 computational cost를 분석해보면, 각 x<sub>u</sub> 를 업데이트 하는 데 O(*n<sub>u</sub>k<sup>2</sup> + k<sup>3</sup>*) 의 비용이 든다. 여기서 n<sub>u</sub> 는 유저 u가 rating한 item의 수이다. 이와 유사하게 각 y<sub>i</sub> 를 업데이트 하는 데 O(*n<sub>i</sub>k<sup>2</sup> + k<sup>3</sup>*) 의 비용이 든다. 여기서 n<sub>i</sub> 는 item i 에 rating한 user 수이다. 일단 우리가 행렬 X와 Y를 계산하고 나면, 여기엔 예측을 할 수 있는 몇 가지 방법이 있다.
 
