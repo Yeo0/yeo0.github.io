@@ -424,9 +424,9 @@ user based와 아이디어는 비슷하나 유저를 기준으로 아이템을 �
 
 <br/>
 
-그래서 코사인은? 첫째, mean-centered vectors에 대한 Cosine similarity는 Pearson correlation과 매우 유사하다.(r<sub>ui</sub>^는 rating r<sub>ui</sub>–μ<sub>u</sub> 을 정규화 한 것)
+그래서 코사인은? 첫째, mean-centered vectors에 대한 Cosine similarity는 Pearson correlation과 매우 유사하다. (r<sub>ui</sub>^는 rating r<sub>ui</sub>–μ<sub>u</sub> 을 정규화 한 것)
 
-![image-20190223022423186](/assets/img/rs6_26.png){:width="400" height="200"}
+![image-20190223022423186](/assets/img/rs6_26.png)
 
 <u>만약 우리가  I<sub>u</sub> ∩ I<sub>v</sub> (공통으로 rating된 item)를 합한다면, 정확히 Pearson correlation과 일치</u>한다. <u>그러나 만약 user u가 item i에 대한 rating이 없을 때마다 r<sub>ui</sub>^=0으로 'I<sub>u</sub> ∪ I<sub>v</sub> 를 합한다면 상황은 달라진다.</u> 유저가 정확히 같은 item에 rating 한 경우, 그것은 pearson correlation을 유지한다. 그러나 한명의 user만 rating을 하고 다른 user는 rating하지 않았다면, 해당 rating은 분자와는 멀어지지만 분모에는 여전히 영향을 미친다. (0을 곱하기 때문) 그래서 이 similarity function는 공동으로 rating한 item / user item set sizes = (|I<sub>u</sub> ∩ I<sub>v</sub>| / √|I<sub>u</sub>|√I<sub>v</sub>|)에 기반하여 스스로 감소한다. (rating 이 연산에 영향을 미치기 때문에 엄격한 linear scaling은 아니지만, 이 프레임은 기본 아이디어를 전달하는 데 유용하다고 생각) 오프라인 실험에서는 이런 다이나믹한 self-damping이 유의한 가중치보다 더 효과적이고, 50이라는 상당히 임의적인 cutoff에 의존하지 않는다는 추가적인 장점도 있다.
 
