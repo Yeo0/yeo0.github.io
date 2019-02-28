@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Matrix Factorization에 대해 이해, 이를 푸는 방법론 중 하나인 Alternating Least Square (ALS) 알고리즘 이해"
+title: "Matrix Factorization에 대해 이해, Alternating Least Square (ALS) 이해"
 subtitle: "9"
 categories: data
 tags: rs
@@ -60,7 +60,7 @@ co-clustering 문제를 해결하기 위한 가장 인기 있는 알고리즘 �
 
 그러므로 선형대수로 돌아가서, MF는 아래과 같은 cost function을 최소화하도록 두 행렬 U와 P의 원래 행렬 R의 근사치를 목표로 하는 최적화 과정의 한 형태다.
 
-![J = ||R - U \times {P^T}||_2 + \lambda \left(||U||_2 + ||P||_2 \right)](https://s0.wp.com/latex.php?latex=J+%3D+%7C%7CR+-+U+%5Ctimes+%7BP%5ET%7D%7C%7C_2+%2B+%5Clambda+%5Cleft%28%7C%7CU%7C%7C_2+%2B+%7C%7CP%7C%7C_2+%5Cright%29&bg=ffffff&fg=5e5e5e&s=0)
+![img](https://s0.wp.com/latex.php?latex=J+%3D+%7C%7CR+-+U+%5Ctimes+%7BP%5ET%7D%7C%7C_2+%2B+%5Clambda+%5Cleft%28%7C%7CU%7C%7C_2+%2B+%7C%7CP%7C%7C_2+%5Cright%29&bg=ffffff&fg=5e5e5e&s=0)
 
 이 cost function의 <u>앞 부분은 원래의 rating matrix R과 그 근사치인 U x P<sup>T</sup> 사이의 평균 제곱오차(MSE)</u> 거리 측정이다. 뒷 부분은 <u>"Regularization term"이라 불리며 일반화된 solution을 나타내기 위해</u> 추가된다. (일부 noise를 rating에 줆으로서 overfitting을 막음.)
 
@@ -106,11 +106,11 @@ MF의 cost function을 다시 보면, 우리는 두 가지 유형의 변수(U와
 
 ![\forall{u_i}: J\left({u_i}\right) = ||R_i - {u_i}\times{P^T}||_2 + \lambda \cdot ||u_i||_2](https://s0.wp.com/latex.php?latex=%5Cforall%7Bu_i%7D%3A+J%5Cleft%28%7Bu_i%7D%5Cright%29+%3D+%7C%7CR_i+-+%7Bu_i%7D%5Ctimes%7BP%5ET%7D%7C%7C_2+%2B+%5Clambda+%5Ccdot+%7C%7Cu_i%7C%7C_2&bg=ffffff&fg=5e5e5e&s=0)
 
-![\forall{p_j}: J\left({p_j}\right) = ||R_i - U\times{p_j^T}||_2 + \lambda \cdot ||p_j||_2](https://s0.wp.com/latex.php?latex=%5Cforall%7Bp_j%7D%3A+J%5Cleft%28%7Bp_j%7D%5Cright%29+%3D+%7C%7CR_i+-+U%5Ctimes%7Bp_j%5ET%7D%7C%7C_2+%2B+%5Clambda+%5Ccdot+%7C%7Cp_j%7C%7C_2&bg=ffffff&fg=5e5e5e&s=0)
+![img](https://s0.wp.com/latex.php?latex=%5Cforall%7Bp_j%7D%3A+J%5Cleft%28%7Bp_j%7D%5Cright%29+%3D+%7C%7CR_i+-+U%5Ctimes%7Bp_j%5ET%7D%7C%7C_2+%2B+%5Clambda+%5Ccdot+%7C%7Cp_j%7C%7C_2&bg=ffffff&fg=5e5e5e&s=0)
 
 여기에 *u<sub>i</sub>* 와 *p<sub>j</sub>* 에 해당하는 solution은 아래와 같다.
 
-![{u_i} = {\left( {{P^T} \times P + \lambda I} \right)^{ - 1}} \times {P^T} \times {R_i}](https://s0.wp.com/latex.php?latex=%7Bu_i%7D+%3D+%7B%5Cleft%28+%7B%7BP%5ET%7D+%5Ctimes+P+%2B+%5Clambda+I%7D+%5Cright%29%5E%7B+-+1%7D%7D+%5Ctimes+%7BP%5ET%7D+%5Ctimes+%7BR_i%7D&bg=ffffff&fg=5e5e5e&s=0)
+![img](https://s0.wp.com/latex.php?latex=%7Bu_i%7D+%3D+%7B%5Cleft%28+%7B%7BP%5ET%7D+%5Ctimes+P+%2B+%5Clambda+I%7D+%5Cright%29%5E%7B+-+1%7D%7D+%5Ctimes+%7BP%5ET%7D+%5Ctimes+%7BR_i%7D&bg=ffffff&fg=5e5e5e&s=0)
 
 ![{p_j} = {\left( {{U^T} \times U + \lambda I} \right)^{ - 1}} \times {U^T} \times {R_j}](https://s0.wp.com/latex.php?latex=%7Bp_j%7D+%3D+%7B%5Cleft%28+%7B%7BU%5ET%7D+%5Ctimes+U+%2B+%5Clambda+I%7D+%5Cright%29%5E%7B+-+1%7D%7D+%5Ctimes+%7BU%5ET%7D+%5Ctimes+%7BR_j%7D&bg=ffffff&fg=5e5e5e&s=0)
 
@@ -124,15 +124,15 @@ MF의 cost function을 다시 보면, 우리는 두 가지 유형의 변수(U와
 
 MF는 rating matrix R에서 missing value을 허용한다. 이 때 cost function은 아래와 같이 바뀐다.
 
-![J = \mathop \sum \limits_{i,j} w_{i,j} \cdot \left( R_{i,j} - {u_i}\times{p_j^T}\right)^2 + \lambda \left( ||U||_2 + ||P||_2 \right)](https://s0.wp.com/latex.php?latex=J+%3D+%5Cmathop+%5Csum+%5Climits_%7Bi%2Cj%7D+w_%7Bi%2Cj%7D+%5Ccdot+%5Cleft%28+R_%7Bi%2Cj%7D+-+%7Bu_i%7D%5Ctimes%7Bp_j%5ET%7D%5Cright%29%5E2+%2B+%5Clambda+%5Cleft%28+%7C%7CU%7C%7C_2+%2B+%7C%7CP%7C%7C_2+%5Cright%29&bg=ffffff&fg=5e5e5e&s=0)
+![img](https://s0.wp.com/latex.php?latex=J+%3D+%5Cmathop+%5Csum+%5Climits_%7Bi%2Cj%7D+w_%7Bi%2Cj%7D+%5Ccdot+%5Cleft%28+R_%7Bi%2Cj%7D+-+%7Bu_i%7D%5Ctimes%7Bp_j%5ET%7D%5Cright%29%5E2+%2B+%5Clambda+%5Cleft%28+%7C%7CU%7C%7C_2+%2B+%7C%7CP%7C%7C_2+%5Cright%29&bg=ffffff&fg=5e5e5e&s=0)
 
-where ![{w_{i,j}} = \left\{ {\begin{array}{*{20}{c}}{\begin{array}{*{20}{c}}1&{{R_{i,j}}\;is\;known}\end{array}}\\{\begin{array}{*{20}{c}}0&{{R_{i,j}}\;is\;unknown}\end{array}}\end{array}} \right.](https://s0.wp.com/latex.php?latex=%7Bw_%7Bi%2Cj%7D%7D+%3D+%5Cleft%5C%7B+%7B%5Cbegin%7Barray%7D%7B%2A%7B20%7D%7Bc%7D%7D%7B%5Cbegin%7Barray%7D%7B%2A%7B20%7D%7Bc%7D%7D1%26%7B%7BR_%7Bi%2Cj%7D%7D%5C%3Bis%5C%3Bknown%7D%5Cend%7Barray%7D%7D%5C%5C%7B%5Cbegin%7Barray%7D%7B%2A%7B20%7D%7Bc%7D%7D0%26%7B%7BR_%7Bi%2Cj%7D%7D%5C%3Bis%5C%3Bunknown%7D%5Cend%7Barray%7D%7D%5Cend%7Barray%7D%7D+%5Cright.&bg=ffffff&fg=5e5e5e&s=0)
+where ![img](https://s0.wp.com/latex.php?latex=%7Bw_%7Bi%2Cj%7D%7D+%3D+%5Cleft%5C%7B+%7B%5Cbegin%7Barray%7D%7B%2A%7B20%7D%7Bc%7D%7D%7B%5Cbegin%7Barray%7D%7B%2A%7B20%7D%7Bc%7D%7D1%26%7B%7BR_%7Bi%2Cj%7D%7D%5C%3Bis%5C%3Bknown%7D%5Cend%7Barray%7D%7D%5C%5C%7B%5Cbegin%7Barray%7D%7B%2A%7B20%7D%7Bc%7D%7D0%26%7B%7BR_%7Bi%2Cj%7D%7D%5C%3Bis%5C%3Bunknown%7D%5Cend%7Barray%7D%7D%5Cend%7Barray%7D%7D+%5Cright.&bg=ffffff&fg=5e5e5e&s=0)
 
 
 
 여기에 *u<sub>i</sub>* 와 *p<sub>j</sub>* 에 해당하는 solution은 아래와 같다.
 
-![{u_i} = {\left( {{P^T} \times {w_i} \times P + \lambda I} \right)^{ - 1}} \times {P^T} \times {w_i} \times {r_i}](https://s0.wp.com/latex.php?latex=%7Bu_i%7D+%3D+%7B%5Cleft%28+%7B%7BP%5ET%7D+%5Ctimes+%7Bw_i%7D+%5Ctimes+P+%2B+%5Clambda+I%7D+%5Cright%29%5E%7B+-+1%7D%7D+%5Ctimes+%7BP%5ET%7D+%5Ctimes+%7Bw_i%7D+%5Ctimes+%7Br_i%7D&bg=ffffff&fg=5e5e5e&s=0)
+![img](https://s0.wp.com/latex.php?latex=%7Bu_i%7D+%3D+%7B%5Cleft%28+%7B%7BP%5ET%7D+%5Ctimes+%7Bw_i%7D+%5Ctimes+P+%2B+%5Clambda+I%7D+%5Cright%29%5E%7B+-+1%7D%7D+%5Ctimes+%7BP%5ET%7D+%5Ctimes+%7Bw_i%7D+%5Ctimes+%7Br_i%7D&bg=ffffff&fg=5e5e5e&s=0)
 
 ![{p_j} = {\left( {{U^T} \times {w_j} \times U + \lambda I} \right)^{ - 1}} \times {U^T} \times {w_j} \times {r_j}](https://s0.wp.com/latex.php?latex=%7Bp_j%7D+%3D+%7B%5Cleft%28+%7B%7BU%5ET%7D+%5Ctimes+%7Bw_j%7D+%5Ctimes+U+%2B+%5Clambda+I%7D+%5Cright%29%5E%7B+-+1%7D%7D+%5Ctimes+%7BU%5ET%7D+%5Ctimes+%7Bw_j%7D+%5Ctimes+%7Br_j%7D&bg=ffffff&fg=5e5e5e&s=0)
 
