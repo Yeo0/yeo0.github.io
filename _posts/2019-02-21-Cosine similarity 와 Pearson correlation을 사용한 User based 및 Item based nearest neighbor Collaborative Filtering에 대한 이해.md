@@ -64,7 +64,7 @@ comments: true
 
 ex) Alice가 item5를 얼마나 좋아할지 결정해라
 
-![image-20190221171636588](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190221171636588.png)
+![image-20190221171636588](/assets/img/rs6_1.png)
 
 
 
@@ -83,7 +83,7 @@ ex) Alice가 item5를 얼마나 좋아할지 결정해라
 
     
 
-    ![image-20190221221652741](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190221221652741.png)
+    ![image-20190221221652741](/assets/img/rs6_2.png)
 
     *a, b = users*
 
@@ -93,13 +93,13 @@ ex) Alice가 item5를 얼마나 좋아할지 결정해라
 
 
 
-![image-20190221225517650](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190221225517650.png)
+![image-20190221225517650](/assets/img/rs6_3.png)
 
-![image-20190221225645320](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190221225645320.png)
+![image-20190221225645320](/assets/img/rs6_4.png)
 
 *손계산 참고
 
-![image-20190221225707829](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190221225707829.png)
+![image-20190221225707829](/assets/img/rs6_5.png)
 
 - Pearson correlation : rating의 차이를 고려한다.
 
@@ -111,7 +111,7 @@ ex) Alice가 item5를 얼마나 좋아할지 결정해라
 
 - Making prediction
 
-  ![image-20190221230637276](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190221230637276.png)
+  ![image-20190221230637276](/assets/img/rs6_6.png)
 
   *a, b = users*
 
@@ -181,7 +181,7 @@ ex) Alice가 item5를 얼마나 좋아할지 결정해라
   - item 5 와 비슷한 다른 item 찾기
   - 찾은 비슷한 item들에 대한 Alice의 rating을 받아서 item 5의 rating을 예측함.
 
-![image-20190222000907245](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190222000907245.png)
+![image-20190222000907245](/assets/img/rs6_7.png)
 
 
 
@@ -195,7 +195,7 @@ ex) Alice가 item5를 얼마나 좋아할지 결정해라
 
 - 벡터 사이의 각도를 기준으로 Similarity를 계산한다.
 
-  ![image-20190222003402061](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190222003402061.png)
+  ![image-20190222003402061](/assets/img/rs6_8.png)
 
 - **Adjusted cosine similarity**
 
@@ -205,7 +205,7 @@ ex) Alice가 item5를 얼마나 좋아할지 결정해라
 
     
 
-  ![image-20190222004641599](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190222004641599.png)
+  ![image-20190222004641599](/assets/img/rs6_9.png)
 
   <br/>
 
@@ -213,7 +213,7 @@ ex) Alice가 item5를 얼마나 좋아할지 결정해라
 
   - A common prediction function:
 
-    ![image-20190222004940565](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190222004940565.png)
+    ![image-20190222004940565](/assets/img/rs6_10.png)
 
   - Neighborhood size는 일반적으로 특정 크기로 제한된다.
 
@@ -282,7 +282,7 @@ ex) Alice가 item5를 얼마나 좋아할지 결정해라
 
 #### User-User Collaborative Filtering
 
-![image-20190225150322122](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225150322122.png)
+![image-20190225150322122](/assets/img/rs6_11.png)
 
 
 
@@ -306,13 +306,13 @@ ex) Alice가 item5를 얼마나 좋아할지 결정해라
 
 
 
-![image-20190225153247787](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225153247787.png)
+![image-20190225153247787](/assets/img/rs6_12.png)
 
 User 5 를 Target user 라고 하자. User 5 와 User 2와의 correlation은 0.87이지만 6번째 사람과의 correlation은 구할 수 없다. (공통된 rating이 없기 때문)
 
 <br/>
 
-![image-20190225154035687](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225154035687.png)
+![image-20190225154035687](/assets/img/rs6_13.png)
 
 
 
@@ -322,7 +322,7 @@ User5와 User 3의 correlation은 1이다. 공통된 item에 대한 rating이 1�
 
 이 correlation들이 target user와의 similarity가 된다. 이 세명의 유저들의 rating을 combine하여 계산하여 target user의 rating을 예측한다.
 
-![image-20190225155507062](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225155507062.png)
+![image-20190225155507062](/assets/img/rs6_14.png)
 
 
 
@@ -332,7 +332,7 @@ User5와 User 3의 correlation은 1이다. 공통된 item에 대한 rating이 1�
 
 <br/>
 
-![image-20190225170856145](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225170856145.png)
+![image-20190225170856145](/assets/img/rs6_15.png)
 
 <br/>
 
@@ -340,7 +340,7 @@ User5와 User 3의 correlation은 1이다. 공통된 item에 대한 rating이 1�
 
 
 
-![image-20190225161139437](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225161139437.png)
+![image-20190225161139437](/assets/img/rs6_16.png)
 
 
 
@@ -348,31 +348,31 @@ user based와 아이디어는 비슷하나 유저를 기준으로 아이템을 �
 
 ##### 1) cosine similarity
 
-![image-20190225161525563](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225161525563.png)
+![image-20190225161525563](/assets/img/rs6_17.png)
 
 
 
 ##### 2) correlation
 
-![image-20190225161600902](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225161600902.png)
+![image-20190225161600902](/assets/img/rs6_18.png)
 
 
 
 ##### 3) Adjusted cosine similarity
 
-![image-20190225161640375](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225161640375.png)
+![image-20190225161640375](/assets/img/rs6_19.png)
 
 
 
 
 
-![image-20190225162209574](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225162209574.png)
+![image-20190225162209574](/assets/img/rs6_20.png)
 
 
 
 #### Item-based CF Ex.
 
-![image-20190225162328269](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225162328269.png)
+![image-20190225162328269](/assets/img/rs6_21.png)
 
 
 
@@ -382,17 +382,17 @@ user based와 아이디어는 비슷하나 유저를 기준으로 아이템을 �
 
 - 우리는 주로 큰 데이터셋을 다루게 된다.
 
-![image-20190225170709422](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225170709422.png)
+![image-20190225170709422](/assets/img/rs6_22.png)
 
 
 
-![image-20190225170203064](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225170203064.png)
+![image-20190225170203064](/assets/img/rs6_23.png)
 
 
 
 원래 데이터에는 수많은 0이 생기기 때문에  dimension reduction을 해야 powerful한 결과를 낼 수 있다. 
 
-![image-20190225170502326](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190225170502326.png)
+![image-20190225170502326](/assets/img/rs6_24.png)
 
 <br/>
 
@@ -414,7 +414,7 @@ user based와 아이디어는 비슷하나 유저를 기준으로 아이템을 �
 
 1) 한 사용자가 rating을 했지만 다른 사용자가 rating을 하지 않은 item으로 무엇을 할 것인가 하는 문제다. 이를 처리하는 간단하고 통계적으로 정확한 방법은 두 사용자 모두 rating을 한 itmes만 고려하고 이를 일관되게 수행하는 것이다. 이에 따라 다음과 같은 공식이 나오는데, 여기서 I<sub>u</sub>는  user u 에 의해 rating 된 item이다.
 
-![image-20190223015136936](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190223015136936.png)
+![image-20190223015136936](/assets/img/rs6_25.png)
 
 
 
@@ -426,7 +426,7 @@ user based와 아이디어는 비슷하나 유저를 기준으로 아이템을 �
 
 그래서 코사인은? 첫째, mean-centered vectors에 대한 Cosine similarity는 Pearson correlation과 매우 유사하다.(r<sub>ui</sub>^는 rating r<sub>ui</sub>–μ<sub>u</sub> 을 정규화 한 것)
 
-![image-20190223022423186](/Users/yeoyoung/Library/Application Support/typora-user-images/image-20190223022423186.png){:width="400" height="200"}
+![image-20190223022423186](/assets/img/rs6_26.png){:width="400" height="200"}
 
 <u>만약 우리가  I<sub>u</sub> ∩ I<sub>v</sub> (공통으로 rating된 item)를 합한다면, 정확히 Pearson correlation과 일치</u>한다. <u>그러나 만약 user u가 item i에 대한 rating이 없을 때마다 r<sub>ui</sub>^=0으로 'I<sub>u</sub> ∪ I<sub>v</sub> 를 합한다면 상황은 달라진다.</u> 유저가 정확히 같은 item에 rating 한 경우, 그것은 pearson correlation을 유지한다. 그러나 한명의 user만 rating을 하고 다른 user는 rating하지 않았다면, 해당 rating은 분자와는 멀어지지만 분모에는 여전히 영향을 미친다. (0을 곱하기 때문) 그래서 이 similarity function는 공동으로 rating한 item / user item set sizes = (|I<sub>u</sub> ∩ I<sub>v</sub>| / √|I<sub>u</sub>|√I<sub>v</sub>|)에 기반하여 스스로 감소한다. (rating 이 연산에 영향을 미치기 때문에 엄격한 linear scaling은 아니지만, 이 프레임은 기본 아이디어를 전달하는 데 유용하다고 생각) 오프라인 실험에서는 이런 다이나믹한 self-damping이 유의한 가중치보다 더 효과적이고, 50이라는 상당히 임의적인 cutoff에 의존하지 않는다는 추가적인 장점도 있다.
 
