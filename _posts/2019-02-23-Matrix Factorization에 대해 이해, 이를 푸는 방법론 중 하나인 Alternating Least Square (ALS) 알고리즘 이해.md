@@ -88,13 +88,13 @@ Gradient descent는 MF 모델을 최적화하는데 효과가 있는 것으로 �
 
 ##### - 2) Alternating Least Squares 
 
-MF의 cost function을 다시 보면, 우리는 두 가지 유형의 변수(U와 P)를 배우는 것을 목표로 하고 있으며, 이 둘은 U x P<sup>T</sup> 로 묶여있다. 실제 cost function은 ![||R-{U}\times{P^T}||_2 = \mathop \sum \limits_{i,j}\left({R_{i,j}-{u_i}\times{p_j}}\right)](https://s0.wp.com/latex.php?latex=%7C%7CR-%7BU%7D%5Ctimes%7BP%5ET%7D%7C%7C_2+%3D+%5Cmathop+%5Csum+%5Climits_%7Bi%2Cj%7D%5Cleft%28%7BR_%7Bi%2Cj%7D-%7Bu_i%7D%5Ctimes%7Bp_j%7D%7D%5Cright%29&bg=ffffff&fg=5e5e5e&s=0) 에 regularization term을 더한 것이라는 걸 기억하자. U<sup>'</sup> 와 V<sup>'</sup> 가 미지의 변수라는 것은 이 cost function을 <u>non-convex</u>로 만든다. (= cost function은 positive semi-definite = cost function>=0 = 볼록하지 않음)
+MF의 cost function을 다시 보면, 우리는 두 가지 유형의 변수(U와 P)를 배우는 것을 목표로 하고 있으며, 이 둘은 U x P<sup>T</sup> 로 묶여있다. 실제 cost function은 ![img](https://s0.wp.com/latex.php?latex=%7C%7CR-%7BU%7D%5Ctimes%7BP%5ET%7D%7C%7C_2+%3D+%5Cmathop+%5Csum+%5Climits_%7Bi%2Cj%7D%5Cleft%28%7BR_%7Bi%2Cj%7D-%7Bu_i%7D%5Ctimes%7Bp_j%7D%7D%5Cright%29&bg=ffffff&fg=5e5e5e&s=0) 에 regularization term을 더한 것이라는 걸 기억하자. U<sup>'</sup> 와 V<sup>'</sup> 가 미지의 변수라는 것은 이 cost function을 <u>non-convex</u>로 만든다. (= cost function은 positive semi-definite = cost function>=0 = 볼록하지 않음)
 
 ![Ordinary Least Square fit to data](https://datasciencemadesimpler.files.wordpress.com/2015/12/plot_sgd_ols.png?w=300&h=225)
 
 
 
-그러나 또 다른 흥미로운 사실은 이 부분에 있다. 만약 P를 고정시키고 U에 대해서만 최적화를 시킨다면, 이 문제는 선형 회귀의 문제로 전락할 뿐이다. 선형회귀에서 우리는 주어진 X와 y에 대해 제곱오차 ![||y - X\beta||_2](https://s0.wp.com/latex.php?latex=%7C%7Cy+-+X%5Cbeta%7C%7C_2&bg=ffffff&fg=5e5e5e&s=0) 를 최소화 시켜서 β를 구할 수 있다. 이 solution은 궁극적으로 OLS formula  ![{\beta = \left({{X^T}X}\right)^{ - 1}}{X^T}y](https://s0.wp.com/latex.php?latex=%7B%5Cbeta+%3D+%5Cleft%28%7B%7BX%5ET%7DX%7D%5Cright%29%5E%7B+-+1%7D%7D%7BX%5ET%7Dy&bg=ffffff&fg=5e5e5e&s=0) 에 의해 주어진다.
+그러나 또 다른 흥미로운 사실은 이 부분에 있다. 만약 P를 고정시키고 U에 대해서만 최적화를 시킨다면, 이 문제는 선형 회귀의 문제로 전락할 뿐이다. 선형회귀에서 우리는 주어진 X와 y에 대해 제곱오차 ![img](https://s0.wp.com/latex.php?latex=%7C%7Cy+-+X%5Cbeta%7C%7C_2&bg=ffffff&fg=5e5e5e&s=0) 를 최소화 시켜서 β를 구할 수 있다. 이 solution은 궁극적으로 OLS formula  ![img](https://s0.wp.com/latex.php?latex=%7B%5Cbeta+%3D+%5Cleft%28%7B%7BX%5ET%7DX%7D%5Cright%29%5E%7B+-+1%7D%7D%7BX%5ET%7Dy&bg=ffffff&fg=5e5e5e&s=0) 에 의해 주어진다.
 
 
 
