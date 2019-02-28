@@ -29,8 +29,9 @@ comments: true
 
 - [jupyter notebook link](https://github.com/Yeo0/Recommendation-system/blob/master/Day7_Recommendation%20system_%20Building%20collaborative%20filtering%20model%20from%20scratch.ipynb)
 
+<br/>
 
-
+- 일부 주요 코드만 표현했습니다
 
 1) load package / read data
 
