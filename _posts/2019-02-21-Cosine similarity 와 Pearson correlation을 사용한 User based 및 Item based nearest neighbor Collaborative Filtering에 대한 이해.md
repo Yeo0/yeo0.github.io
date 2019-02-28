@@ -64,7 +64,7 @@ comments: true
 
 ex) Alice가 item5를 얼마나 좋아할지 결정해라
 
-![image-20190221171636588](/assets/img/rs6_1.png)
+![image-20190221171636588](/assets/img/rs6_1.jpg)
 
 
 
@@ -83,7 +83,7 @@ ex) Alice가 item5를 얼마나 좋아할지 결정해라
 
     
 
-    ![image-20190221221652741](/assets/img/rs6_2.png)
+    ![image-20190221221652741](/assets/img/rs6_2.jpg)
 
     *a, b = users*
 
