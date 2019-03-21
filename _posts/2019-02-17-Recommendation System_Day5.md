@@ -77,7 +77,7 @@ Content-based system 은 user의 과거 item과 profile features을 사용하여
 
 #### Model-based
 
-이 방법은 Machine learning과 Data mining 기술에 기반한다. 예측을 할 수 있는 모델을 훈련시키는 것이 목표이다. 예를 들어, 우리는 기존 user-item interactions를 사용하여 사용자가 가장 좋아할 수 있는 상위 5개 항목을 예측하는 모델을 훈련시킬 수 있다. 이러한 방법의 한 가지 장점은 **memory-based과 같은 다른 방법과 비교했을 때 더 많은 users에게 수의 사용자에게 더 많은 items를 추천할 수 있다**는 것이다. 우리는 그들이large sparse matrices를 가지고 작동 때에도 large *coverage*를 가지고 있다고 말한다.
+이 방법은 Machine learning과 Data mining 기술에 기반한다. 예측을 할 수 있는 모델을 훈련시키는 것이 목표이다. 예를 들어, 우리는 기존 user-item interactions를 사용하여 사용자가 가장 좋아할 수 있는 상위 5개 항목을 예측하는 모델을 훈련시킬 수 있다. 이러한 방법의 한 가지 장점은 **memory-based과 같은 다른 방법과 비교했을 때 더 많은 users에게 수의 사용자에게 더 많은 items를 추천할 수 있다**는 것이다. 우리는 그들이 Popularity Bias problem : 유명한 것으로 추천이 치우치게 된다는 것. 음악을 추천한다고 할 때 collaborative filtering을 사용하여 3명 밖에 듣지않은 음악을 추천하는 것은 매우 어려운 일이다. 같은 similarity점수라 하더라도 더 많은 사람들이 좋아한 것을 추천하게 된다.large sparse matrices를 가지고 작동 때에도 large *coverage*를 가지고 있다고 말한다.
 
 <br/>
 
