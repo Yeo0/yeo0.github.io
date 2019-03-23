@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "DAY11 _ CF의 limitation을 이해하고 text data에 익숙해지기"
+title: "CF의 limitation을 이해하고 text data에 익숙해지기"
 subtitle: "11"
 categories: data
 tags: rs
 comments: true
 ---
+
+
 
 # Recommendation System_Day11
 

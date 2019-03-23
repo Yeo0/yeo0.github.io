@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DAY9 _ Explicit feedback과 Implicit feedback에 대해 이해, implicit feedback을 풀기 위한 implicit ALS 구현"
+title: "Explicit feedback과 Implicit feedback에 대해 이해, implicit feedback을 풀기 위한 implicit ALS 구현"
 subtitle: "10"
 categories: data
 tags: rs
