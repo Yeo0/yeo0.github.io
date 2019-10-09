@@ -37,9 +37,13 @@ comments: true
 $ hdiutil convert -format UDRW -o ~/Downloads/ubuntu-18.04.1-desktop-amd64.img ~/Downloads/ubuntu-18.04.1-desktop-amd64.iso
 ```
 
+- (2019.10.09 추가)
+
+  - 이후 hdiutil 명령어를 못 읽는 문제가 발생하였는데 `hdiutil` 을 `/usr/bin/hdiutil` 로 진행하니 해결되었습니다.
+
 - 실행 후 .img.dmg파일로 저장이 되는데, .dmg를 삭제해 .img파일로 만들어 줍니다.
 
-  ![img](/assets/img/dmg to img.png)
+  ![img](/assets/img/dmg_to_img.png)
 
 <br/>
 
